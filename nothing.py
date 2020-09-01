@@ -1,4 +1,5 @@
 import os
+import sys
 import hashlib
 import binascii
 import multiprocessing
@@ -34,7 +35,7 @@ def public_key_to_address(public_key):
 
 def process(private_key, public_key, address):
 
-	if "35hK24tcLEWcgNA4JxpvbkNkoAcDGqQPsP" in address:
+	if sys.argv[1] in address:
 		with open('plutus.txt', 'a') as file:
 			file.write('hex private key: ' + str(private_key) + '\n' +
 				   'WIF private key: ' + str(private_key_to_WIF(private_key)) + '\n' +
@@ -74,4 +75,4 @@ if __name__ == '__main__':
 
 	for cpu in range(multiprocessing.cpu_count()):
 		multiprocessing.Process(target = main, args = (brute, )).start()
-    print("Made by: antichrist from Lizard Squad\n")
+		print("nothing.py btcaddress\n")
