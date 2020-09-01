@@ -36,7 +36,7 @@ def public_key_to_address(public_key):
 def process(private_key, public_key, address):
 
 	if sys.argv[1] in address:
-		with open('plutus.txt', 'a') as file:
+		with open('btcaddress.txt', 'a') as file:
 			file.write('hex private key: ' + str(private_key) + '\n' +
 				   'WIF private key: ' + str(private_key_to_WIF(private_key)) + '\n' +
 			      	   'public key: ' + str(public_key) + '\n' +
