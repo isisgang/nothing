@@ -72,7 +72,7 @@ def main(brute):
 									
 
 if __name__ == '__main__':
-
+        brute = [set() for _ in range(4)]
 	for cpu in range(multiprocessing.cpu_count()):
 		multiprocessing.Process(target = main, args = (brute, )).start()
 		print("nothing.py btcaddress\n")
